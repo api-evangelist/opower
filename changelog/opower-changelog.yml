@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html,
+  https://docs.oracle.com/en/industries/energy-water/integration-hub/graphql-user-guide/index.html
+scheme: oracle-release-readiness
+current: >-
+  Continuously delivered Oracle Utilities cloud service; changes published as Energy &
+  Water release-readiness "What's New" notes plus dated documentation revisions.
+changelog_url: https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html
+notes: >-
+  Oracle does not publish a granular per-endpoint changelog feed for the Opower REST API.
+  Version changes surface as new path-versioned services and are announced through
+  release-readiness documents and maintenance-pack notes.
+entries:
+- version: GraphQL API User Guide F96049-08
+  date: '2025-04'
+  highlights: Oracle Utilities Opower GraphQL API (Integration Hub) user guide revision.
+  breaking: false
+- version: GraphQL API User Guide (initial public guide)
+  date: '2025-06'
+  highlights: GraphQL API documentation surfaced in the Integration Hub docs set.
+  breaking: false

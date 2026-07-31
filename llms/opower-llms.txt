@@ -1,0 +1,35 @@
+# OPOWER (Oracle Utilities Opower)
+
+> Opower is a customer engagement and energy efficiency cloud platform for utilities, delivered as Oracle Utilities Opower since Oracle's 2016 acquisition. It turns hundreds of billions of smart-meter reads into home energy reports, bill forecasting/comparison, usage disaggregation, neighbor comparisons, tips, high-bill alerts, and multi-channel notifications. Developers integrate via a RESTful Digital Self Service - Energy Management API and an Integration Hub GraphQL API, both OAuth 2.0 (client-credentials) secured.
+
+## APIs
+
+- [Oracle Utilities Opower REST API](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/): Customer, utility-account, usage, billing, disaggregation, neighbor-comparison, tips, threshold and notification resources. Base URL https://cxapi.opower.com (stage: https://cxapi-stage.opower.com).
+- [Oracle Utilities Opower GraphQL API](https://docs.oracle.com/en/industries/energy-water/integration-hub/graphql-user-guide/index.html): GraphQL access through the Integration Hub.
+
+## Docs
+
+- [Developer portal / platform docs](https://docs.oracle.com/en/industries/utilities/opower-platform/)
+- [REST API reference (all endpoints)](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html)
+- [Getting started / quick start](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/QuickStart.html)
+- [Using OAuth 2.0 authentication](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/UseOAuth.html)
+- [Release readiness (What's New)](https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html)
+
+## Auth
+
+- OAuth 2.0 client-credentials (two-legged). Token endpoint: https://cxapi.opower.com/apis/authorization-v1/oauth2/token
+- POST grant_type=client_credentials with HTTP Basic client_id:client_secret; use returned access_token as `Authorization: Bearer {token}`.
+- Utilities must front the APIs with a server-side API gateway; never expose OAuth credentials to browsers or mobile apps.
+
+## Artifacts
+
+- [Authentication profile](authentication/opower-authentication.yml)
+- [API conventions](conventions/opower-conventions.yml)
+- [Error / status-code catalog](errors/opower-problem-types.yml)
+- [Lifecycle & versioning](lifecycle/opower-lifecycle.yml)
+- [Changelog](changelog/opower-changelog.yml)
+- [Conformance](conformance/opower-conformance.yml)
+- [Data model](data-model/opower-data-model.yml)
+- [Sandbox / test environments](sandbox/opower-sandbox.yml)
+- [MCP candidate tools](mcp/opower-mcp.yml)
+- [Domain security](security/opower-domain-security.yml)

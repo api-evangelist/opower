@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.oracle.com/en/industries/utilities/opower-platform/,
+  https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html,
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html
+versioning:
+  scheme: uri-path
+  mechanism: Major version embedded in each service path segment (e.g. -v1, -v2).
+  examples: [customer-data-v2, usage-v1, notification-contact-v1, billComparison-v2, spark-v2]
+  notes: >-
+    Backwards-incompatible changes are shipped as a new versioned service; older versions
+    (e.g. spark-v1, notification-contact-v1) remain available alongside newer ones.
+release_cadence:
+  detail: >-
+    Delivered as an Oracle Utilities cloud service on Oracle's Energy & Water release
+    schedule with periodic maintenance packs.
+  readiness: https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html
+  maintenance_packs: https://support.oracle.com/epmos/faces/DocumentDisplay?id=2616460.1
+deprecation:
+  policy_url: https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html
+  sunset_header: false
+  notes: >-
+    No RFC 8594 Sunset/Deprecation header support is documented. Deprecations and product
+    changes are communicated through Oracle release-readiness notes and maintenance packs.
+sla:
+  url: https://www.oracle.com/cloud/sla/
+  public_uptime_target: null
+  notes: Availability is governed by the Oracle Cloud service-level agreements for utilities customers.
+status_page: null
+status_page_notes: >-
+  No public Opower-specific status page. Operational status is handled through Oracle
+  Support / the customer's Oracle Cloud tenancy rather than a public status.io page.
+deprecated_operations: []

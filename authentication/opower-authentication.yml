@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/UseOAuth.html
+docs: https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/UseOAuth.html
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials]
+  model: two-legged (trusted developer / utility) client-credentials
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  description: >-
+    Oracle Utilities Opower REST APIs use the OAuth 2.0 standard with two-legged
+    authorization: a trusted developer (the utility) obtains an access token using the
+    client_credentials grant and their client_id / client_secret, then passes it as a
+    Bearer token on every request. Tokens are short-lived (expires_in ~3599 seconds).
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://cxapi.opower.com/apis/authorization-v1/oauth2/token
+    scopes: {}
+  token_request: >-
+    POST /apis/authorization-v1/oauth2/token with body grant_type=client_credentials,
+    HTTP Basic auth of client_id:client_secret, Content-Type application/x-www-form-urlencoded.
+  token_response_fields: [client_id, access_token, token_type, expires_in]
+  usage: 'Authorization: Bearer {access_token}'
+  guidance: >-
+    Oracle documents that keys/tokens must not be used directly in a browser or mobile
+    app; utilities must front the Opower APIs with a server-side API gateway that exchanges
+    an end-customer session token for a utility OAuth token.
+scopes: none-documented
+notes: >-
+  The GraphQL Integration Hub API is likewise OAuth 2.0 secured. No OAuth scopes are
+  documented; access is governed by the utility's provisioned products and roles.

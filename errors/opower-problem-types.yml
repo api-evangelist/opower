@@ -1,0 +1,66 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.oracle.com/en/industries/utilities/customer-experience/restapi/Status_Codes.html
+format: http-status
+envelope: >-
+  Responses with an HTTP status >= 400 are either empty or contain an error response in
+  JSON or XML format. Oracle Utilities Opower uses standard HTTP status codes; there is no
+  RFC 9457 problem+json contract documented.
+problems:
+- status: 200
+  title: OK
+  meaning: A successful GET or POST returns 200.
+  class: success
+- status: 201
+  title: Created
+  meaning: Request succeeded and a new resource was created; Location header carries its URI.
+  class: success
+- status: 202
+  title: Accepted
+  meaning: Request accepted for processing but not yet complete.
+  class: success
+- status: 400
+  title: Bad Request
+  meaning: Request could not be processed because it contains missing or invalid information.
+  class: client-error
+- status: 401
+  title: Unauthorized
+  meaning: Authentication credentials are missing or invalid.
+  class: client-error
+  remediation: Obtain a valid OAuth 2.0 client-credentials access token and send it as a Bearer token.
+- status: 403
+  title: Forbidden
+  meaning: Insufficient roles and privileges to perform the request.
+  class: client-error
+- status: 404
+  title: Not Found
+  meaning: The request includes a resource URI that does not exist.
+  class: client-error
+- status: 405
+  title: Method Not Allowed
+  meaning: The HTTP method is not supported for this URI.
+  class: client-error
+- status: 406
+  title: Not Acceptable
+  meaning: Client cannot understand the server response (unsupported media type in Accept).
+  class: client-error
+- status: 415
+  title: Unsupported Media Type
+  meaning: Payload format is unsupported (e.g. incorrect Content-Type header).
+  class: client-error
+- status: 500
+  title: Internal Server Error
+  meaning: The server encountered something unexpected.
+  class: server-error
+- status: 501
+  title: Not Implemented
+  meaning: The server does not support the method used in the request.
+  class: server-error
+- status: 503
+  title: Service Unavailable
+  meaning: The server is unable to complete the request due to overload (usually temporary).
+  class: server-error
+- status: 504
+  title: Gateway Timeout
+  meaning: The gateway did not receive a timely response from the upstream server.
+  class: server-error

@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/UseOAuth.html,
+  https://docs.oracle.com/en/industries/utilities/customer-experience/restapi/Status_Codes.html
+standards:
+- id: oauth2
+  conforms: true
+  evidence: REST and GraphQL APIs use OAuth 2.0 client-credentials with a documented token endpoint.
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: grant_type=client_credentials, Basic-auth client_id:client_secret, Bearer access token.
+- id: rest
+  conforms: true
+  evidence: HTTP/REST with JSON, standard verbs (GET/POST/PUT/DELETE) and standard status codes.
+- id: graphql
+  conforms: true
+  evidence: Integration Hub GraphQL API published with a user guide.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error bodies are generic JSON/XML with standard HTTP status codes; no application/problem+json contract.
+- id: openidconnect
+  conforms: false
+  evidence: No OIDC discovery document; client-credentials machine-to-machine only.
+- id: rfc8594-sunset
+  conforms: false
+  evidence: No Sunset/Deprecation header support documented.
+- id: tcpa
+  conforms: true
+  evidence: Contact Preferences / notification APIs are gated for TCPA compliance per Oracle docs.

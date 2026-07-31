@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: probed
+source: live probes of /.well-known/* on the Opower API host
+host: https://cxapi.opower.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  No /.well-known discovery documents are published on cxapi.opower.com. The OAuth token
+  endpoint is documented directly at /apis/authorization-v1/oauth2/token rather than via an
+  RFC 8414 oauth-authorization-server document. Absence recorded as valid data.

@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/QuickStart.html,
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/UseOAuth.html,
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html
+authentication:
+  style: oauth2-client-credentials
+  header: 'Authorization: Bearer {access_token}'
+  detail: authentication/opower-authentication.yml
+base_urls:
+  production: https://cxapi.opower.com
+  stage: https://cxapi-stage.opower.com
+  path_pattern: https://cxapi.opower.com/apis/{service-version}/{utilityCode}/{resource}
+versioning:
+  style: uri-path
+  detail: >-
+    Each service carries its major version in the path segment, e.g. customer-data-v2,
+    usage-v1, notification-contact-v1, billComparison-v2, billforecast-v2. Breaking
+    changes ship as a new versioned service (v1 -> v2).
+  lifecycle: lifecycle/opower-lifecycle.yml
+tenancy:
+  parameter: utilityCode
+  detail: >-
+    Requests are scoped to a utility via a {utilityCode} path segment; customer-level
+    resources are then addressed by customer id.
+media_type: application/json
+methods: [GET, POST, PUT, DELETE]
+pagination:
+  documented: false
+  notes: No cursor/offset pagination convention is documented in the public reference.
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract is documented for the Opower REST API.
+error_envelope:
+  detail: >-
+    Responses with status >= 400 are either empty or return an error body in JSON (or XML).
+    Standard HTTP status codes are used (400/401/403/404/405/406/415/500/501/503/504).
+  catalog: errors/opower-problem-types.yml
+rate_limit_signal:
+  documented: false
+gateway_pattern:
+  required: true
+  detail: >-
+    Oracle requires utilities to place a server-side API gateway in front of Opower APIs;
+    end-customer session tokens are exchanged server-side for the utility's OAuth token
+    rather than exposing OAuth credentials to browsers/mobile clients.

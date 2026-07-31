@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/QuickStart.html
+environments:
+- name: production
+  base_url: https://cxapi.opower.com
+  purpose: Updates/retrievals against the utility's production system serving live customers.
+- name: stage
+  base_url: https://cxapi-stage.opower.com
+  purpose: API call and feature testing before production.
+test_credentials:
+  self_serve: false
+  detail: >-
+    Testing credentials (OAuth client_id / client_secret for the stage environment) are
+    provisioned by the Oracle Utilities Delivery Team as part of onboarding; there are no
+    self-serve or publicly published test credentials or magic test identifiers.
+magic_test_values: none-published
+notes: >-
+  Access to both environments requires a provisioned utility tenancy. No public test cards,
+  tokens or sample customer ids are documented; fabricating them would be inaccurate.

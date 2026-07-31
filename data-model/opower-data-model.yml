@@ -1,0 +1,56 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html,
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/energy-management-overview/near-real-time-usage-overview.html
+note: >-
+  Entity graph derived from the documented Opower REST resource model (no public OpenAPI).
+  Customer, Utility Account and Home Profile are the core objects; usage and engagement
+  data hang off the customer's active utility account.
+entities:
+- name: Customer
+  key_of: customer-data-v2
+  description: A utility end customer; root object addressed by customer id, scoped by utilityCode.
+- name: UtilityAccount
+  key_of: customer-data-v2
+  description: A customer's utility account; carries service points and usage.
+- name: HomeProfile
+  key_of: customer-data-v2
+  description: Attributes of a customer's home used to personalize insights; readable and updatable.
+- name: Usage
+  key_of: usage-v1
+  description: Gas/electric consumption (raw, daily, billing interval) for a utility account's service points.
+- name: NotificationContact
+  key_of: notification-contact-v1
+  description: A contact for a customer with notification preferences, channels and events.
+- name: Threshold
+  key_of: threshold-v1
+  description: Cost/usage thresholds for a customer's High Bill Alerts.
+- name: Tip
+  key_of: tips-v1
+  description: Personalized energy-saving tips and recorded tip actions for a customer.
+relationships:
+- from: Customer
+  to: UtilityAccount
+  type: has_many
+  via: customer id
+- from: Customer
+  to: HomeProfile
+  type: has_one
+  via: customer id
+- from: UtilityAccount
+  to: Usage
+  type: has_many
+  via: service point
+- from: Customer
+  to: NotificationContact
+  type: has_many
+  via: customer id
+- from: Customer
+  to: Threshold
+  type: has_many
+  via: customer id
+- from: Customer
+  to: Tip
+  type: has_many
+  via: customer id

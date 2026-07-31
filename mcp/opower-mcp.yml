@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: >-
+  Derived from the documented Oracle Utilities Opower REST resource groups at
+  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html
+note: >-
+  No official hosted/remote MCP server is published for Oracle Utilities Opower. The tools
+  below are a CANDIDATE mapping of documented REST resource groups to MCP tools, for a
+  future community/first-party server. Each maps to a real documented, OAuth 2.0-secured
+  resource; none are verified against a machine-readable OpenAPI spec (Oracle does not
+  publish one publicly).
+server:
+  name: opower
+  transport: http
+  url: null
+tools:
+- name: get_customers
+  description: List customers and fetch/update a customer's home profile and utility accounts.
+  source_resource: customer-data-v2
+- name: get_usage
+  description: Get billing, daily and raw interval gas/electric usage for a customer's utility account.
+  source_resource: usage-v1
+- name: get_bill_comparison
+  description: Get a customer's bill comparison.
+  source_resource: billComparison-v2
+- name: get_bill_forecast
+  description: Get bill forecast and current bill period for a customer.
+  source_resource: billforecast-v2
+- name: get_disaggregation
+  description: Get always-on, annual and per-bill energy-use disaggregation.
+  source_resource: disaggregation-v1
+- name: get_neighbor_comparison
+  description: Get the latest and historical neighbor comparisons for a customer.
+  source_resource: neighborComparison-v1
+- name: manage_notification_contacts
+  description: Create, read, update and delete notification contacts, preferences and channels.
+  source_resource: notification-contact-v1
+- name: get_customer_engagements
+  description: Get click, open, send and complaint engagement events for a customer.
+  source_resource: customer-engagement-v1
+- name: manage_thresholds
+  description: Get, set and delete usage/cost thresholds for High Bill Alerts.
+  source_resource: threshold-v1
+- name: manage_tips
+  description: Get, update and delete energy-saving tips and tip actions.
+  source_resource: tips-v1
