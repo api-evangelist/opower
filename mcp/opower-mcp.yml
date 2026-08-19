@@ -1,15 +1,11 @@
 generated: '2026-07-20'
 method: derived
 status: candidate
-source: >-
-  Derived from the documented Oracle Utilities Opower REST resource groups at
-  https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html
-note: >-
-  No official hosted/remote MCP server is published for Oracle Utilities Opower. The tools
-  below are a CANDIDATE mapping of documented REST resource groups to MCP tools, for a
-  future community/first-party server. Each maps to a real documented, OAuth 2.0-secured
-  resource; none are verified against a machine-readable OpenAPI spec (Oracle does not
-  publish one publicly).
+source: Derived from the documented Oracle Utilities Opower REST resource groups at https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html
+note: No official hosted/remote MCP server is published for Oracle Utilities Opower. The tools below are
+  a CANDIDATE mapping of documented REST resource groups to MCP tools, for a future community/first-party
+  server. Each maps to a real documented, OAuth 2.0-secured resource; none are verified against a machine-readable
+  OpenAPI spec (Oracle does not publish one publicly).
 server:
   name: opower
   transport: http
@@ -45,3 +41,9 @@ tools:
 - name: manage_tips
   description: Get, update and delete energy-saving tips and tip actions.
   source_resource: tips-v1
+deployment:
+  mode: none
+  verified: derived
+  tools: 10
+  checked: '2026-08-12'
+  source: catalog MCP census
