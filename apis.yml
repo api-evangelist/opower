@@ -56,6 +56,11 @@ apis:
   - REST
   - Usage
   - Billing
+  - Notification
+  tags_raw:
+  - REST
+  - Usage
+  - Billing
   - Notifications
   properties:
   - type: APIReference
