@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-OPOWER is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: energy. This profile is a lead awaiting the enrichment pipeline.
+Opower is a customer engagement and energy efficiency cloud platform for utilities, now delivered as Oracle Utilities Opower after Oracle acquired the company in 2016. The platform analyzes hundreds of billions of smart-meter reads to power home energy reports, bill forecasting and comparison, usage disaggregation, neighbor comparisons, personalized tips, high-bill alerts and thresholds, and multi-channel customer notifications for utilities such as PG&E, Exelon and National Grid. For developers, Oracle Utilities Opower exposes a RESTful Digital Self Service - Energy Management API and an Integration Hub GraphQL API, both secured with OAuth 2.0 client-credentials, letting utilities integrate customer, utility-account, usage, billing, disaggregation, and notification data into their own digital self-service channels.
 
-Backed by: accel — http://www.opower.com
+**Areas:** Company · Energy · Utilities · Energy Efficiency · Customer Engagement · Smart Meter · Usage Data · Oracle
+
+## OPOWER on APIs.io
+
+Everything profiled for OPOWER is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opower/](https://apis.io/providers/opower/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Oracle Utilities Opower REST API (Digital Self Service - Energy Management)](https://apis.io/apis/opower/oracle-utilities-opower-rest-api-digital-self-service-energy-management/) — RESTful API for viewing and managing Opower customer, utility-account, usage, billing, disaggregation, neighbor-comparison, tips, threshold and notification…
+- [Oracle Utilities Opower GraphQL API (Integration Hub)](https://apis.io/apis/opower/oracle-utilities-opower-graphql-api-integration-hub/) — GraphQL API delivered through the Oracle Utilities Opower Integration Hub for querying Opower platform data. OAuth 2.0 secured.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [opower](https://apis.io/servers/opower/opower/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Opower Authentication](https://apis.io/security/opower/opower-authentication/)
+- [Opower Domain Security](https://apis.io/security/opower/opower-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.opower.com)
+- [Documentation](https://docs.oracle.com/en/industries/energy-water/digital-self-service/)
+- [Getting started](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/QuickStart.html)
+- [API reference](https://docs.oracle.com/en/industries/energy-water/digital-self-service/restapi/rest-endpoints.html)
+- [Support](https://support.oracle.com/)
+- [Changelog](https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html)
+
+## API Evangelist rating
+
+**Kin Score 24.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 61.9 |
+| Access clarity | 0.0 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.9** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opower/](https://apis.io/providers/opower/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OPOWER: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opower/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
